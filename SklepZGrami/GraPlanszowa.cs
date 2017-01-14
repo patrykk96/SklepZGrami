@@ -14,12 +14,17 @@ namespace SklepZGrami
 
         public GraPlanszowa() { }
 
-        public GraPlanszowa(string nazwa, double cena, string producent, string wydawca, string gatunek, string dataPremiery, int ograniczenieWiekowe, int minimumOsob, int maximumOsob, double waga)
-            :base(nazwa, cena, producent, wydawca, gatunek, dataPremiery, ograniczenieWiekowe)
+        public GraPlanszowa(string nazwa, double cena, string gatunek, string dataPremiery, int ograniczenieWiekowe, int minimumOsob, int maximumOsob, double waga)
+            :base(nazwa, cena, gatunek, dataPremiery, ograniczenieWiekowe)
         {
             this.minimumOsob = minimumOsob;
             this.maximumOsob = maximumOsob;
             this.waga = waga;
+        }
+        public override string ToString()
+        {
+            return "nazwa: " + nazwa + ", cena: " + cena + ", gatunek: " + gatunek + ", dataPremiery: " + dataPremiery + "ograniczenie wiekowe: " + ograniczenieWiekowe
+                + "+, liczba osob: " + minimumOsob + "-" + maximumOsob + ", waga: " + waga; 
         }
     }
 }
