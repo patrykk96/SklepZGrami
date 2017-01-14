@@ -9,15 +9,16 @@ namespace SklepZGrami
     class Gra
     {
         protected string nazwa;
-        protected int cena;
+        protected double cena;
         protected string producent;
         protected string wydawca;
         protected string gatunek;
         protected string dataPremiery;
+        protected int ograniczenieWiekowe;
 
         public Gra() { }
 
-        public Gra(string nazwa, int cena, string producent, string wydawca, string gatunek, string dataPremiery)
+        public Gra(string nazwa, double cena, string producent, string wydawca, string gatunek, string dataPremiery, int ograniczenieWiekowe)
         {
             this.nazwa = nazwa;
             this.cena = cena;
@@ -25,6 +26,7 @@ namespace SklepZGrami
             this.wydawca = wydawca;
             this.gatunek = gatunek;
             this.dataPremiery = dataPremiery;
+            this.ograniczenieWiekowe = ograniczenieWiekowe;
         }
 
     }
