@@ -66,6 +66,7 @@
     <Compile Include="Gra.cs" />
     <Compile Include="GraPlanszowa.cs" />
     <Compile Include="GraWideo.cs" />
+    <Compile Include="IDodajGre.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
