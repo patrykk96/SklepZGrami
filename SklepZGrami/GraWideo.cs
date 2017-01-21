@@ -20,7 +20,7 @@ namespace SklepZGrami
 
         public override string ToString()
         {
-            return "nazwa: " + nazwa + ", cena: " + cena + ", gatunek: " + gatunek + "ograniczenie wiekowe: " + ograniczenieWiekowe
+            return "Nazwa: " + nazwa + ", cena: " + cena + ", gatunek: " + gatunek + ", ograniczenie wiekowe: " + ograniczenieWiekowe
                 + "+, platforma: " + platforma;
         }
     }

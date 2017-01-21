@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SklepZGrami
 {
-    class Pracownik:IDodajGre
+    class Pracownik:IDodajGre, IPobierzNazwy
     {
         private List<Gra> listaGier;
 
@@ -32,10 +32,22 @@ namespace SklepZGrami
 
         public IEnumerable<string> PobierzNazwy()
         {
-            string[] nazwyGier = new string[listaGier.Count];
+            string[] nazwaGry = new string[listaGier.Count];
             for (int i = 0; i < listaGier.Count; i++)
-                nazwyGier[i] = listaGier[i].nazwa;
-            return nazwyGier;
+                nazwaGry[i] = listaGier[i].nazwa;
+            return nazwaGry;
+        }
+
+        public List<Gra> ZwrocListe()
+        {
+            return listaGier;
+        }
+
+        public void DomyslneProdukty()
+        {
+            listaGier.Add(new GraWideo("Wiedźmin 3: Dziki Gon", 99.99, "RPG", 18, "PC"));
+            listaGier.Add(new GraWideo("Battlefield 1", 229.99, "FPS", 18, "PS4"));
+            listaGier.Add(new GraWideo("Batman: Arkham Knight", 59.99, "Akcja", 18, "PC"));
         }
     }
 }

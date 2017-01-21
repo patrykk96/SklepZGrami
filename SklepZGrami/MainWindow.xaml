@@ -12,16 +12,15 @@
             <Label x:Name="labelPowitanie" Content="WITAJ W SKLEPIE Z GRAMI" HorizontalAlignment="Left" Margin="181,52,0,0" VerticalAlignment="Top" Height="66" Width="470" FontSize="36" FontWeight="Bold" Background="White" Foreground="#FF990303"/>
             <Label x:Name="labelInformacja" Content="Kliknij odpowiednią opcję" HorizontalAlignment="Left" Margin="289,165,0,0" VerticalAlignment="Top" FontStyle="Italic" FontSize="20"/>
             <Button x:Name="buttonPracownik" Content="Jestem pracownikiem" HorizontalAlignment="Left" Margin="181,223,0,0" VerticalAlignment="Top" Width="141" Height="85" Click="buttonPracownik_Click"/>
-            <Button x:Name="buttonKlient" Content="Jestem klientem" HorizontalAlignment="Left" Margin="484,223,0,0" VerticalAlignment="Top" Width="141" Height="85"/>
+            <Button x:Name="buttonKlient" Content="Jestem klientem" HorizontalAlignment="Left" Margin="484,223,0,0" VerticalAlignment="Top" Width="141" Height="85" Click="buttonKlient_Click"/>
             <Label x:Name="labelHaslo" Content="Hasło" HorizontalAlignment="Left" Margin="136,336,0,0" VerticalAlignment="Top"/>
             <Button x:Name="buttonZaloguj" Content="Zaloguj!" HorizontalAlignment="Left" Margin="200,375,0,0" VerticalAlignment="Top" Width="75" Click="buttonZaloguj_Click"/>
             <PasswordBox x:Name="passwordBoxPracownik" HorizontalAlignment="Left" Width="118" Height="20" Margin="181,344,0,0" VerticalAlignment="Top" />
         </Grid>
-        <Grid Name="panelPracownika" HorizontalAlignment="Left" Height="570" VerticalAlignment="Top" Width="794" Margin="0,0,-0.4,0">
+        <Grid Name="panelPracownika" HorizontalAlignment="Left" Height="570" VerticalAlignment="Top" Width="794" Margin="0,0,-0.4,0" Visibility="Hidden">
             <Label x:Name="labelPanelPracownika" Content="Panel Pracownika" Margin="297,10,288,0" VerticalAlignment="Top" FontSize="24" Foreground="#FFF30303" FontWeight="Bold"/>
             <Button x:Name="buttonGraWideo" Content="Dodaj grę wideo" HorizontalAlignment="Left" Margin="68,84,0,0" VerticalAlignment="Top" Width="142" Height="50" Click="buttonGraWideo_Click"/>
             <Button x:Name="buttonGraPlanszowa" Content="Dodaj grę planszową" HorizontalAlignment="Left" Margin="68,139,0,0" VerticalAlignment="Top" Width="142" Height="50" Click="buttonGraPlanszowa_Click"/>
-            <Button x:Name="buttonUsunOstatniPracownik" Content="Usuń ostatni" HorizontalAlignment="Left" Margin="68,229,0,0" VerticalAlignment="Top" Width="142" Height="50"/>
             <Grid Name="panelDodajGreWideo" HorizontalAlignment="Left" Height="279" Margin="259,84,0,0" VerticalAlignment="Top" Width="247" Visibility="Hidden">
                 <Label x:Name="labelNazwaGraWideo" Content="Nazwa" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="labelCenaGraWideo" Content="Cena" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
@@ -36,7 +35,7 @@
                 <Button x:Name="buttonDodajGreWideo" Content="Dodaj" HorizontalAlignment="Left" Margin="121,183,0,0" VerticalAlignment="Top" Width="75" Click="buttonDodajGreWideo_Click"/>
 
             </Grid>
-            <Grid x:Name="panelDodajGrePlanszowa" HorizontalAlignment="Left" Height="279" Margin="259,84,0,0" VerticalAlignment="Top" Width="247">
+            <Grid x:Name="panelDodajGrePlanszowa" HorizontalAlignment="Left" Height="279" Margin="259,84,0,0" VerticalAlignment="Top" Width="247" Visibility="Hidden">
                 <Label x:Name="labelNazwaGraPlansz" Content="Nazwa" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="labelCenaGraPlansz" Content="Cena" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top"/>
                 <Label x:Name="labelGatunek" Content="Gatunek" HorizontalAlignment="Left" Margin="10,62,0,0" VerticalAlignment="Top"/>
@@ -53,6 +52,21 @@
             </Grid>
             <ListBox x:Name="listBoxProdukty" HorizontalAlignment="Left" Height="370" Margin="548,84,0,0" VerticalAlignment="Top" Width="194"/>
             <Label x:Name="labelListaProduktow" Content="Lista produktów" HorizontalAlignment="Left" Margin="548,53,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="buttonWrocDoMenuPracownik" Content="Wróć do menu" HorizontalAlignment="Left" Margin="68,390,0,0" VerticalAlignment="Top" Width="122" Height="44" Click="buttonWrocDoMenuPracownik_Click"/>
+        </Grid>
+        <Grid x:Name="panelKlienta" HorizontalAlignment="Left" Height="570" VerticalAlignment="Top" Width="794" Margin="0,0,-0.4,0">
+            <Label x:Name="labelPanelKlienta" Content="Panel Klienta" HorizontalAlignment="Left" Margin="324,27,0,0" VerticalAlignment="Top" Foreground="Red" FontSize="24" FontWeight="Bold"/>
+            <ListBox x:Name="listBoxListaProduktowKlient" HorizontalAlignment="Left" Height="268" Margin="130,113,0,0" VerticalAlignment="Top" Width="190"/>
+            <ListBox x:Name="listBoxKoszyk" HorizontalAlignment="Left" Height="268" Margin="479,113,0,0" VerticalAlignment="Top" Width="190"/>
+            <Label x:Name="labelListaProduktowKlient" Content="Lista produktów" HorizontalAlignment="Left" Margin="130,82,0,0" VerticalAlignment="Top" Width="143" FontSize="18"/>
+            <Label x:Name="labelKoszyk" Content="Koszyk" HorizontalAlignment="Left" Margin="479,82,0,0" VerticalAlignment="Top" FontSize="18"/>
+            <Button x:Name="buttonPrzeniesDoKoszyka" Content="Przenieś do koszyka" HorizontalAlignment="Left" Margin="341,154,0,0" VerticalAlignment="Top" Width="113" Height="44" Click="buttonPrzeniesDoKoszyka_Click"/>
+            <Button x:Name="buttonUsunZKoszyka" Content="Usuń z koszyka" HorizontalAlignment="Left" Margin="341,203,0,0" VerticalAlignment="Top" Width="113" Height="44" Click="buttonUsunZKoszyka_Click"/>
+            <Button x:Name="buttonPowrotDoMenuKlient" Content="Powrót do Menu!" HorizontalAlignment="Left" Margin="27,472,0,0" VerticalAlignment="Top" Width="116" Height="60" Click="buttonPowrotDoMenuKlient_Click"/>
+            <Button x:Name="buttonInfo" Content="Informacje" HorizontalAlignment="Left" Margin="341,252,0,0" VerticalAlignment="Top" Width="113" Height="44" Click="buttonInfo_Click"/>
+            <Button x:Name="buttonWyczyscKoszyk" Content="Wyczyść Koszyk" HorizontalAlignment="Left" Margin="341,301,0,0" VerticalAlignment="Top" Width="113" Height="44" Click="buttonWyczyscKoszyk_Click"/>
+            <Label x:Name="labelKoszt" Content="Do zapłacenia:" HorizontalAlignment="Left" Margin="479,386,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="labelKosztTekst" Content="0 zł" HorizontalAlignment="Left" Margin="570,386,0,0" VerticalAlignment="Top"/>
         </Grid>
 
     </Grid>

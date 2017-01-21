@@ -67,7 +67,7 @@
     <Compile Include="GraPlanszowa.cs" />
     <Compile Include="GraWideo.cs" />
     <Compile Include="IDodajGre.cs" />
-    <Compile Include="IKoszyk.cs" />
+    <Compile Include="IPobierzNazwy.cs" />
     <Compile Include="Klient.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

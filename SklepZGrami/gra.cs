@@ -9,7 +9,7 @@ namespace SklepZGrami
     class Gra
     {
         public string nazwa;
-        protected double cena;
+        public double cena;
         protected string gatunek;
         protected int ograniczenieWiekowe;
 
