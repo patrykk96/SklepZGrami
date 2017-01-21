@@ -12,15 +12,15 @@ namespace SklepZGrami
         
         public GraWideo() { }
 
-        public GraWideo(string nazwa, double cena, string gatunek, string dataPremiery, int ograniczenieWiekowe, string platforma) 
-            :base(nazwa,cena,gatunek,dataPremiery, ograniczenieWiekowe)
+        public GraWideo(string nazwa, double cena, string gatunek, int ograniczenieWiekowe, string platforma) 
+            :base(nazwa,cena,gatunek, ograniczenieWiekowe)
         {
             this.platforma = platforma;
         }
 
         public override string ToString()
         {
-            return "nazwa: " + nazwa + ", cena: " + cena + ", gatunek: " + gatunek + ", dataPremiery: " + dataPremiery + "ograniczenie wiekowe: " + ograniczenieWiekowe
+            return "nazwa: " + nazwa + ", cena: " + cena + ", gatunek: " + gatunek + "ograniczenie wiekowe: " + ograniczenieWiekowe
                 + "+, platforma: " + platforma;
         }
     }

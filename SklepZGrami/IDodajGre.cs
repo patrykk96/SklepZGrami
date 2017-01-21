@@ -8,7 +8,7 @@ namespace SklepZGrami
 {
     interface IDodajGre
     {
-        void DodajGreWideo(string nazwa, double cena, string gatunek, string dataPremiery, int ograniczenieWiekowe, string platforma);
-        void DodajGrePlanszowa(string nazwa, double cena, string gatunek, string dataPremiery, int ograniczenieWiekowe, int minimumOsob, int maximumOsob, double waga);
+        void DodajGreWideo(string nazwa, double cena, string gatunek, int ograniczenieWiekowe, string platforma);
+        void DodajGrePlanszowa(string nazwa, double cena, string gatunek, int ograniczenieWiekowe, int minimumOsob, int maximumOsob);
     }
 }

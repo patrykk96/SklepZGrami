@@ -67,12 +67,15 @@
     <Compile Include="GraPlanszowa.cs" />
     <Compile Include="GraWideo.cs" />
     <Compile Include="IDodajGre.cs" />
+    <Compile Include="IKoszyk.cs" />
+    <Compile Include="Klient.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pracownik.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
